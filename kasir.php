@@ -1,3 +1,23 @@
+<?php
+ include "kasir.php";
+
+     $jajan = "INSERT INTO penjualan (id_kasir,nama,telepon,STATUS,jsername,PASSWOD)value(
+    '".$_POST['id_kasir']."',
+    '".$_POST['nama']."',
+    '".$_POST['telepon']."',
+    '".$_POST['STATUS']."',
+    '".$_POST['jsername']."',
+    '".$_POST['PASSWORD']."'
+    
+
+
+    )";
+
+    $koneksi->query($jajan);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,31 +31,31 @@
   <form action ="distributor.php" method="post">
   <div class="mb-3">
     <label for="id_kasir" class="form-label"> id_kasir</label>
-    <input type="text" class="form-control" id="id_kasir" name="id_kasir">
+    <input type="text" class="form-control" id="id_kasir" name="id_kasir" value="<?=$p['id_kasir'] ?>">
   </div>
   <div class="mb-3">
     <label for="nama " class="form-label"> nama</label>
-    <input type="text" class="form-control" id="nama" name="nama">
+    <input type="text" class="form-control" id="nama" name="nama" value="<?=$p['nama'] ?>">
   </div>
   <div class="mb-3">
     <label for="telepon" class="form-label"> telepon</label>
-    <input type="number" class="form-control" id="telepon" name="telepon">
+    <input type="number" class="form-control" id="telepon" name="telepon" value="<?=$p['telepon'] ?>">
   </div>
   <div class="mb-3">
     <label for="STATUS" class="form-label"> STATUS</label>
-    <input type="number" class="form-control" id="STATUS" name="STATUS">
+    <input type="number" class="form-control" id="STATUS" name="STATUS" value="<?=$p['STATUS'] ?>">
   </div>
   <div class="mb-3">
     <label for="jsername" class="form-label"> jsername</label>
-    <input type="number" class="form-control" id="jsername" name="jsername">
+    <input type="number" class="form-control" id="jsername" name="jsername" value="<?=$p['jsername'] ?>">
   </div>
   <div class="mb-3">
     <label for="PASSWORD" class="form-label"> PASSWORD</label>
-    <input type="number" class="form-control" id="PASSWORD" name="PASSWORD">
+    <input type="number" class="form-control" id="PASSWORD" name="PASSWORD" value="<?=$p['PASSWOD'] ?>">
   </div>
   <div class="mb-3">
     <label for="akses" class="form-label"> akses</label>
-    <input type="number" class="form-control" id="akses" name="akses">
+    <input type="number" class="form-control" id="akses" name="akses" value="<?=$p['akses'] ?>">
   </div>
   <button type="submit" class="btn btn-primary">submit</button>
 </form>

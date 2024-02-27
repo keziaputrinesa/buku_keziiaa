@@ -12,5 +12,5 @@
     )";
 
     $koneksi->query($jajan);
-
-?>
+    
+    ?>
